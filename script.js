@@ -6,7 +6,7 @@ const notificationChatId = '-1002150759513'; // Replace with the correct notific
 let lastUpdateId = 0;
 
 document.getElementById('order1').addEventListener('click', () => {
-    sendOrderWithKeyboard('Diablo 4\nUber Build');
+    sendOrderWithKeyboard('Diablo 4\nUber Build\n100Mil Gold');
 });
 
 document.getElementById('order2').addEventListener('click', () => {
