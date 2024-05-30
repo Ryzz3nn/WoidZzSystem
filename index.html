@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preset Orders</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #1a1a1a; color: #fff; }
+        .category-button { background-color: #333; color: #fff; }
+        .category-button:hover { background-color: #555; }
+        .order-card { background-color: #222; }
+        .order-card:hover { background-color: #444; }
+        .details-card { background-color: #333; }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded shadow-lg text-center">
-        <h1 class="text-2xl font-bold mb-4">Select Your Order</h1>
-        <button id="order1" class="bg-blue-500 text-white px-4 py-2 rounded mb-2">Order 1</button>
-        <button id="order2" class="bg-green-500 text-white px-4 py-2 rounded mb-2">Order 2</button>
-        <button id="order3" class="bg-red-500 text-white px-4 py-2 rounded mb-2">Order 3</button>
-        <button id="requestOrder" class="bg-purple-500 text-white px-4 py-2 rounded mt-4">I Want This Order</button>
+<body class="flex">
+    <!-- Sidebar -->
+    <div class="w-1/5 h-screen bg-gray-900 p-4">
+        <h2 class="text-xl font-bold mb-4">Categories</h2>
+        <ul class="space-y-2">
+            <li><button class="category-button w-full text-left px-4 py-2 rounded" onclick="showOrders('leveling')">Leveling</button></li>
+            <li><button class="category-button w-full text-left px-4 py-2 rounded" onclick="showOrders('currency')">Currency</button></li>
+            <li><button class="category-button w-full text-left px-4 py-2 rounded" onclick="showOrders('dungeons')">Dungeons</button></li>
+        </ul>
+    </div>
+    <!-- Main content -->
+    <div class="w-4/5 p-6 flex items-center justify-center">
+        <h1 id="initial-text" class="text-3xl font-bold">Select a category from the left</h1>
+        <div id="order-options" class="hidden grid grid-cols-3 gap-4">
+            <!-- Placeholder for order options -->
+        </div>
+        <div id="order-details" class="hidden w-full">
+            <!-- Placeholder for order details -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
